@@ -1,0 +1,613 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Travelo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png'%}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slick.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="{% static 'img/logo.png'%}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="index.html">home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a class="" href="travel_destination.html">Destination</a></li>
+                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                        <li><a href="destination_details.html">Destinations details</a></li>
+                                                        <li><a href="elements.html">elements</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">blog</a></li>
+                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+            <style>
+                body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 31.25rem;
+  margin: 6rem auto;
+}
+
+.label {
+  font-size: .625rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: +1.3px;
+  margin-bottom: 1rem;
+}
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#searchQueryInput {
+  width: 100%;
+  height: 2.8rem;
+  background: #f5f5f5;
+  outline: none;
+  border: none;
+  border-radius: 1.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+}
+
+#searchQuerySubmit {
+  width: 3.5rem;
+  height: 2.8rem;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+            </style>
+                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                                <div class="social_wrap d-flex align-items-center justify-content-end">
+                                    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+                                      <div class="searchBar" style="margin-right: 40px;">
+                                        <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Where to go?" value="" />
+                                        <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                                          <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                                          </svg>
+                                        </button>
+                                      </div>
+                                        
+                                    
+                                </div>
+                            </div>
+                            <style>
+                                @media (min-width: 993px) {
+                                    .seach_icon {
+                                       visibility: hidden;
+                                            }
+                                        }
+                                        @media (min-width: 993px) {
+                                    .col-12 {
+                                       visibility: hidden;
+                                            }
+                                        }
+                            </style>
+                            <div class="seach_icon">
+                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    
+    </style>
+    <!-- header-end -->
+
+    <!--/ bradcam_area  -->
+
+   
+    <!-- where_togo_area_end  -->
+    <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+{% static 'image' as base_url %}
+    
+
+    <div class="popular_places_area">
+        <div class="container" style="margin-bottom: 100px;">
+            <div class="singleDiv">
+            <img src="{{base_url}}/{{dest2.img}}{{profil.image}}" id="single-img">
+            <div id="single_info">
+                <h3>{{ profil.title }}</h3>
+                {% if profil.ratings == 0.5 %}
+                    <h5><i class="fa fa-star-half-o" aria-hidden="true"></i>  | {{profil.type}}</h5>
+                {% elif profil.ratings == 1.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i>  | {{profil.type}}</h5>
+                {% elif profil.ratings == 1.5 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-half-o" aria-hidden="true"></i> | {{profil.type}}</h5>
+                {% elif profil.ratings == 2.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>  | {{profil.type}}</h5>
+                {% elif profil.ratings == 2.5 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-half-o" aria-hidden="true"></i> | {{profil.type}}</h5>
+                {% elif profil.ratings == 3.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>  | {{profil.type}}</h5>
+                {% elif profil.ratings == 3.5 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i>  | {{profil.type}}</h5>
+                {% elif profil.ratings == 4.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>  | {{profil.type}}</h5>
+                {% elif profil.ratings == 4.5 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i>  | {{profil.type}}</h5>
+                {% elif profil.ratings == 5.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>  | {{profil.type}}</h5>
+                {%endif%}
+                <p>{{profil.address}} </p>
+                <p>{{profil.phone}}</p>
+            </div>
+            </div>
+            <div class="singleSplit">
+                <h3>Ratings and reviews</h3>
+                {% if profil.ratings == 0.5 %}
+                    <h5><i class="fa fa-star-half-o" aria-hidden="true"></i></h5>
+                {% elif profil.ratings == 1.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i></h5>
+                {% elif profil.ratings == 1.5 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-half-o" aria-hidden="true"></i></h5>
+                {% elif profil.ratings == 2.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></h5>
+                {% elif profil.ratings == 2.5 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-half-o" aria-hidden="true"></i></h5>
+                {% elif profil.ratings == 3.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></h5>
+                {% elif profil.ratings == 3.5 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i> </h5>
+                {% elif profil.ratings == 4.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></h5>
+                {% elif profil.ratings == 4.5 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></h5>
+                {% elif profil.ratings == 5.0 %}
+                    <h5><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></h5>
+                {%endif%}
+                <p>Adress :</p>
+                <p>{{profil.address}}</p>
+            </div>
+            <div class="singleDivSplit">
+                <h3>Details :</h3>
+                <p>{{profil.details}}</p>
+            </div>
+            <div class="singleDivSplit">
+                <h3>Location and contact</h3>
+                <div>
+                    <div id="myMap" style="position:relative;width:100%;min-width:100px;height:200px;"></div> 
+                </div>
+            </div>
+            <script>
+                    var coor = [{{profil.latitude}},{{profil.longtitude}}]
+                    console.log(coor)
+                    map = new atlas.Map('myMap', 
+                    {
+                        view: 'Auto',
+
+                        //Add authentication details for connecting to Azure Maps.
+                        authOptions: 
+                        {
+                            //Use Azure Active Directory authentication.
+                            authType: 'subscriptionKey',
+                            subscriptionKey: 'lT6ZyyO_DGpOebXFL-_Tf_kI-lNlr7BCQ3Lxn-pUapY',
+                            getToken: function (resolve, reject, map) {
+                                //URL to your authentication service that retrieves an Azure Active Directory Token.
+                                var tokenServiceUrl = "https://azuremapscodesamples.azurewebsites.net/Common/TokenService.ashx";
+
+                                fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+                            }
+
+                            //Alternatively, use an Azure Maps key. Get an Azure Maps key at https://azure.com/maps. NOTE: The primary key should be used as the key.
+                            //authType: 'subscriptionKey',
+                            //subscriptionKey: '<Your Azure Maps Key>'
+                        }
+                    });
+
+                    //Wait until the map resources are ready.
+                    map.events.add('ready', function () {
+                        //Request the user's location
+                        var popupTemplate = '<div class="customInfobox"><div class="name">{name}</div>{description}</div>';
+
+                //Create a data source and add it to the map.
+                var dataSource = new atlas.source.DataSource();
+                map.sources.add(dataSource);
+                var data = coor;
+                dataSource.add(new atlas.data.Feature(new atlas.data.Point(coor), {
+                    name: '{{profil.title}}', 
+                    description: '{{profil.address}}'
+                }));
+                map.setCamera({
+                    center: data,
+                    zoom: 15
+                    });
+                //Create a layer to render point data.
+                var symbolLayer = new atlas.layer.SymbolLayer(dataSource,);
+
+                //Add the polygon and line the symbol layer to the map.
+                map.layers.add(symbolLayer);
+
+                //Create a popup but leave it closed so we can update it and display it later.
+                popup = new atlas.Popup({
+                    pixelOffset: [0, -18],
+                    closeButton: false
+                });
+
+                //Add a hover event to the symbol layer.
+                map.events.add('mouseover', symbolLayer, function (e) {
+                    //Make sure that the point exists.
+                    if (e.shapes && e.shapes.length > 0) {
+                    var content, coordinate;
+                    var properties = e.shapes[0].getProperties();
+                    content = popupTemplate.replace(/{name}/g, properties.name).replace(/{description}/g, properties.description);
+                    coordinate = e.shapes[0].getCoordinates();
+
+                    popup.setOptions({
+                        //Update the content of the popup.
+                        content: content,
+
+                        //Update the popup's position with the symbol's coordinate.
+                        position: coordinate
+
+                    });
+                    //Open the popup.
+                    popup.open(map);
+                    }
+                });
+
+                map.events.add('mouseleave', symbolLayer, function (){
+                    popup.close();
+                });
+                                            
+                                }, );
+
+                                function setMapToUserLocation() {
+    //Request the user's location.
+    navigator.geolocation.getCurrentPosition(function(position) {
+        //Convert the geolocation API position into a longitude/latitude position value the map can understand and center the map over it.
+        map.setCamera({
+            center: [position.coords.longitude, position.coords.latitude],
+            zoom: maxClusterZoomLevel + 1
+        });
+    }, function(error) {
+        //If an error occurs when trying to access the users position information, display an error message.
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert('User denied the request for geolocation.');
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert('Position information is unavailable.');
+                break;
+            case error.TIMEOUT:
+                alert('The request to get user position timed out.');
+                break;
+            case error.UNKNOWN_ERROR:
+                alert('An unknown error occurred.');
+                break;
+        }
+    });
+}
+
+//Initialize the application when the page is loaded.
+window.onload = initialize;
+
+
+                
+            </script>
+            <style>
+                
+                /* CSS styles used by custom popup template */
+                .customInfobox {
+                max-width: 240px;
+                padding: 10px;
+                font-size: 12px;
+                }
+                
+                .customInfobox .name {
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                }
+                </style>
+            <div class="comment">
+                <form>
+
+                    <div class="container mt-5 mb-5 commentdiv">
+                        <div class="d-flex justify-content-center row">
+                            <div class="d-flex flex-column col-md-8">
+                                </div>
+                                <div class="coment-bottom bg-white p-2 px-4">
+
+                                    <div class="d-flex flex-row add-comment-section mt-4 mb-4"><img class="img-fluid img-responsive rounded-circle mr-2" src="https://i.imgur.com/qdiP4DB.jpg" width="38"><input type="text" class="form-control mr-3" placeholder="Add comment"><button class="btn btn-primary" type="button">Comment</button></div>
+                                    {% for comment in comment %}
+                                    <div
+                                        class="commented-section mt-2">
+                                        <div class="d-flex flex-row align-items-center commented-user">
+                                            <h5 class="mr-2">{{comment.user_commented.f_name}}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">4 hours ago</span></div>
+                                        <div class="comment-text-sm"><span>{{comment.comment}}</span></div>
+                                        <div
+                                            class="reply-section">
+                                            <div class="d-flex flex-row align-items-center voting-icons"><i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i><span class="ml-2">10</span><span class="dot ml-2"></span>
+                                                <h6 class="ml-2 mt-1">Reply</h6>
+                                            </div>
+                                </div>
+                            </div>
+                                    {%endfor%}
+
+
+                    </div>
+                    </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="{% static ' img/footer_logo.png'%}" alt="">
+                                </a>
+                            </div>
+                            <p>5th flora, 700/D kings road, green <br> lane New York-1782 <br>
+                                <a href="#">+10 367 826 2567</a> <br>
+                                <a href="#">contact@carpenter.com</a>
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Company
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#"> Gallery</a></li>
+                                <li><a href="#"> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Popular destination
+                            </h3>
+                            <ul class="links double_links">
+                                <li><a href="#">Indonesia</a></li>
+                                <li><a href="#">America</a></li>
+                                <li><a href="#">India</a></li>
+                                <li><a href="#">Switzerland</a></li>
+                                <li><a href="#">Italy</a></li>
+                                <li><a href="#">Canada</a></li>
+                                <li><a href="#">Franch</a></li>
+                                <li><a href="#">England</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Instagram
+                            </h3>
+                            <div class="instagram_feed">
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/1.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/2.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/3.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/4.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/5.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/6.png'%}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- Modal -->
+  <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="serch_form">
+            <input type="text" placeholder="Search" >
+            <button type="submit">search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- link that opens popup -->
+    
+
+    <!-- JS here -->
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js'%}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'js/ajax-form.js'%}"></script>
+    <script src="{% static 'js/waypoints.min.js'%}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js'%}"></script>
+    <script src="{% static 'js/scrollIt.js'%}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js'%}"></script>
+    <script src="{% static 'js/wow.min.js'%}"></script>
+    <script src="{% static 'js/jquery-ui.min.js'%}"> </script>
+    <script src="{% static 'js/nice-select.min.js'%}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'js/plugins.js'%}"></script>
+    <script src="{% static 'js/range.js'%}"></script>
+        <!-- <script src="js/gijgo.min.js"></script> -->
+    <script src="{% static 'js/slick.min.js'%}"></script>
+   
+
+    
+    <script src="{% static 'js/contact.js'%}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+    <script src="{% static 'js/jquery.form.js'%}"></script>
+    <script src="{% static 'js/jquery.validate.min.js'%}"></script>
+    <script src="{% static 'js/mail-script.js'%}"></script>
+
+
+    <script src="{% static 'js/main.js'%}"></script>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+        });
+    </script>
+    </script>
+    
+</body>
+
+</html>

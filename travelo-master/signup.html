@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        {% load static %}
+    <meta charset="UTF-8">
+    <title></title>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+<div class="signhu" id="signhu">
+        <img src="{% static 'img/logo.png'%}">
+        <h3>Sign Up For A New Account</h3>
+
+        <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" class="input_field" name="username" placeholder="Username">
+                <input type="text" class="input_field" name="password" placeholder="First name">
+                <input type="password" class="input_field" name="password" placeholder="Last name">
+                <input type="email" class="input_field" name="password" placeholder="Email">
+                <input type="password" class="input_field" name="password" placeholder="Password">
+                <input type="submit" class="boxed-btn5" value="Sign Up">
+        </form>
+    </div>
+    <div id="screensign" style="display: none;"></div>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js'%}"></script>
+
+</body>
+</html>

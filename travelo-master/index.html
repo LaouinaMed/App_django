@@ -1,0 +1,568 @@
+<!doctype html>
+<html class="no-js" lang="zxx" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Travelo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png'%}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slick.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body onload="signin()">
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="{% static 'img/logo.png'%}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="index.html">home</a></li>
+                                            <li><a href="about.html">About</a></li>
+
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a id="moblog" onclick="diplaylog()">Login</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                                <div class="social_wrap d-flex align-items-center justify-content-end">
+                                    <div class="number">
+                                        <p> <i class="fa fa-phone"></i> 10(256)-928 256</p>
+                                    </div>
+                                    <div class="social_links d-none d-xl-block">
+                                        <ul>
+                                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+                                            <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
+                                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="search_btn buttonsignin">
+                                        <button class="boxed-btn4 " href="#signhu" type="submit" id="btnsign">Sign In</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="seach_icon d-lg-none">
+                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+       
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    
+    <!-- slider_area_end -->
+
+    <!-- where_togo_area_start  -->
+
+    <!-- where_togo_area_end  -->
+    {% static 'image' as base_url %}
+    <!-- popular_destination_area_start  -->
+    <div class="popular_destination_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb_70">
+                        <h3>Popular Services</h3>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for emplacement in place|slice:":6" %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_destination">
+                        <a></a>
+                        <div class="thumb">
+                            <img src="{{base_url}}/{{dest2.img}}{{emplacement.image}}" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="{% url 'profil' emplacement.id%}">
+                                <p class="d-flex align-items-center"> {{emplacement.title}} </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+    <!-- popular_destination_area_end  -->
+
+    <!-- newletter_area_start  -->
+    <div class="newletter_area overlay">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-10">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5">
+                            <div class="newsletter_text">
+                                <h4>Subscribe Our Newsletter</h4>
+                                <p>Subscribe newsletter to get offers and about
+                                    new places to discover.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="mail_form">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-9 col-md-8">
+                                        <div class="newsletter_field">
+                                            <input type="email" placeholder="Your mail" >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="newsletter_btn">
+                                            <button class="boxed-btn4 " type="submit" >Subscribe</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- newletter_area_end  -->
+
+    
+    <div class="signhu" id="signhu" style="display: none;">
+        <img src="{% static 'img/logo.png'%}">
+        <h3>Login to your Account</h3>
+
+        <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" class="input_field" name="username" placeholder="UserName">
+                <input type="password" class="input_field" name="password" placeholder="Password">
+                <input type="submit" class="boxed-btn5" value="Sign in">
+        </form>
+        <div class="mt-4">
+                <div class="d-flex justify-content-center links">
+                    Don't have an account? <a href="{% url 'inscription' %}" class="ml-2">Sign Up</a>
+                </div>
+                	<p style="color: red; visibility: hidden;" id="message">there is an error in the username and password</p>
+            </div>
+
+    </div>
+    <div id="myMap" style="visibility: hidden;"></div>
+    <div id="screensign" style="display: none;"></div>
+
+
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="{% static 'img/footer_logo.png'%}" alt="">
+                                </a>
+                            </div>
+                            <p>5th flora, 700/D kings road, green <br> lane New York-1782 <br>
+                                <a href="#">+10 367 826 2567</a> <br>
+                                <a href="#">contact@carpenter.com</a>
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Company
+                            </h3>
+                            <ul class="links">
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#"> Gallery</a></li>
+                                <li><a href="#"> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Popular Services
+                            </h3>
+                            <ul class="links double_links">
+                                <li><a href="#">Indonesia</a></li>
+                                <li><a href="#">America</a></li>
+                                <li><a href="#">India</a></li>
+                                <li><a href="#">Switzerland</a></li>
+                                <li><a href="#">Italy</a></li>
+                                <li><a href="#">Canada</a></li>
+                                <li><a href="#">Franch</a></li>
+                                <li><a href="#">England</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Instagram
+                            </h3>
+                            <div class="instagram_feed">
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/1.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/2.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/3.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/4.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/5.png'%}" alt="">
+                                    </a>
+                                </div>
+                                <div class="single_insta">
+                                    <a href="#">
+                                        <img src="{% static 'img/instagram/6.png'%}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <!-- Modal -->
+  <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="serch_form">
+            <input type="text" placeholder="Search" >
+            <button type="submit">search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- link that opens popup -->
+<!--     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> </script> -->
+    <!-- JS here -->
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js'%}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'js/ajax-form.js'%}"></script>
+    <script src="{% static 'js/waypoints.min.js'%}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js'%}"></script>
+    <script src="{% static 'js/scrollIt.js'%}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js'%}"></script>
+    <script src="{% static 'js/wow.min.js'%}"></script>
+    <script src="{% static 'js/nice-select.min.js'%}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'js/plugins.js'%}"></script>
+    <script src="{% static 'js/gijgo.min.js'%}"></script>
+    <script src="{% static 'js/slick.min.js'%}"></script>
+
+
+    
+    <!--contact js-->
+    <script src="{% static 'js/contact.js'%}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+    <script src="{% static 'js/jquery.form.js'%}"></script>
+    <script src="{% static 'js/jquery.validate.min.js'%}"></script>
+    <script src="{% static 'js/mail-script.js'%}"></script>
+    <script src="https://kit.fontawesome.com/5e1bb0f570.js" crossorigin="anonymous"></script>
+
+
+
+    <script src="{% static 'js/main.js'%}"></script>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+        });
+    </script>
+    <script>
+        function signin() {
+            if (window.location.pathname=="/%23signin") {
+                $('#signhu').fadeIn();
+                $('#screensign').fadeIn();
+                $('#message').css("visibility", "visible");
+                $('html, body').css({
+                overflow: 'hidden',
+                height: '100%'
+                });
+                $('#screensign').click(function(){
+                $('#signhu').fadeOut("slow");
+                $('#screensign').fadeOut("slow");
+                $('html, body').css({
+                    overflow: 'visible',
+                    height: '100%'
+                    });
+                })
+                        }
+                    }
+    </script>
+    <script>
+        $('#btnsign').click(function() {
+        $('#signhu').fadeIn();
+        $('#screensign').fadeIn();
+        $('html, body').css({
+        overflow: 'hidden',
+        height: '100%'
+    });
+      });
+      $('#screensign').click(function(){
+        $('#signhu').fadeOut("slow");
+        $('#screensign').fadeOut("slow");
+        $('html, body').css({
+        overflow: 'visible',
+        height: '100%'
+        });
+      })
+    </script>
+    <script>
+        function diplaylog() {
+        $('#signhu').fadeIn();
+        $('#screensign').fadeIn();
+        $('html, body').css({
+        overflow: 'hidden',
+        height: '100%'
+        });
+      };
+      $('#screensign').click(function(){
+        $('#signhu').fadeOut("slow");
+        $('#screensign').fadeOut("slow");
+        $('html, body').css({
+        overflow: 'visible',
+        height: '100%'
+        });
+      })
+    </script>
+    <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+        <script type='text/javascript'>
+            var map, datasource; 
+    
+    function GetMap() {
+        //Initialize a map instance.
+        map = new atlas.Map('myMap', {
+            view: 'Auto',
+    
+            //Add authentication details for connecting to Azure Maps.
+            authOptions: {
+                //Use Azure Active Directory authentication.
+                authType: 'subscriptionKey',
+                subscriptionKey: 'lT6ZyyO_DGpOebXFL-_Tf_kI-lNlr7BCQ3Lxn-pUapY',
+                getToken: function (resolve, reject, map) {
+                    //URL to your authentication service that retrieves an Azure Active Directory Token.
+                    var tokenServiceUrl = "https://azuremapscodesamples.azurewebsites.net/Common/TokenService.ashx";
+    
+                    fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+                }
+    
+                //Alternatively, use an Azure Maps key. Get an Azure Maps key at https://azure.com/maps. NOTE: The primary key should be used as the key.
+                //authType: 'subscriptionKey',
+                //subscriptionKey: '<Your Azure Maps Key>'
+            }
+        });
+    
+        //Wait until the map resources are ready.
+        map.events.add('ready', function () {
+            //Request the user's location
+            navigator.geolocation.getCurrentPosition(function (position) {
+    
+                //Create a data source and add it to the map.
+                datasource = new atlas.source.DataSource();
+                map.sources.add(datasource);
+    
+                //Add the users position to the data source.
+                var userPosition = [position.coords.longitude, position.coords.latitude];
+                datasource.add(new atlas.data.Point(userPosition));
+                document.getElementById("lat").value=position.coords.latitude;
+                document.getElementById("lng").value=position.coords.longitude;
+    
+                //Add a layer for rendering the users position as a symbol.
+                map.layers.add(new atlas.layer.SymbolLayer(datasource));
+    
+                //Center the map on the users position.
+                map.setCamera({
+                    center: userPosition,
+                    zoom: 15
+                    
+                });
+                map.events.add("load", function () {
+    
+    /*Add point loconstcations*/
+    p = {
+    "coor": [-6.8045976,34.031000001],
+    "coor2": [-6.8045950, 34.0321101],
+    "coor3": [-6.8045930, 34.032440001]
+    };
+    var points = []
+    for (var i in p) {
+    points.push(new atlas.data.Point(p[i]))
+    }
+    console.log(points)
+    
+    /*var points = [
+    new atlas.data.Point([-6.8045976, 34.031000001]),
+    new atlas.data.Point([-6.8045950, 34.0321101]),
+    new atlas.data.Point([-6.8045930, 34.032440001]),
+    new atlas.data.Point([-6.8045910, 34.03020000001]),
+    new atlas.data.Point([-6.8045900, 34.032278001])]*/
+    Object.entries(p).map(([key, value]) => console.log(key, value))
+    
+    /*Create a data source and add it to the map*/
+    var dataSource = new atlas.source.DataSource();
+    map.sources.add(dataSource);
+    /*Add multiple points to the data source*/ 
+    dataSource.add(points);
+    
+    //Create a bubble layer to render the filled in area of the circle, and add it to the map.*/
+    map.layers.add(new atlas.layer.BubbleLayer(dataSource, null, {
+    radius: 5,
+    strokeColor: "#4288f7",
+    strokeWidth: 6, 
+    color: "white" 
+    }));
+    
+    });        
+            }, function (error) {
+                //If an error occurs when trying to access the users position information, display an error message.
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        alert('User denied the request for Geolocation.');
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        alert('Position information is unavailable.');
+                        break;
+                    case error.TIMEOUT:
+                        alert('The request to get user position timed out.');
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        alert('An unknown error occurred.');
+                        break;
+                }
+            });
+        });
+    }
+    document.getElementById("search-box").addEventListener("click", subm);
+    function subm() {
+        document.getElementById("nearby").submit();
+    }
+
+        </script>
+    
+</body>
+</html>
